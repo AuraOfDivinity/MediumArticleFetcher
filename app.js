@@ -6,7 +6,7 @@ var Feed = require("rss-to-json");
 app.use(cors());
 
 app.get("/posts", function(req, res) {
-  Feed.load("ttps://medium.com/feed/codeuino", function(err, rss) {
+  Feed.load("https://medium.com/feed/codeuino", function(err, rss) {
     res.send(rss);
   });
 });
